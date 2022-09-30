@@ -1,0 +1,20 @@
+.listOfSchoolContainer {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: fit-content;
+  /* background: bisque; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid LightGray;
+  border-radius: 5px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}

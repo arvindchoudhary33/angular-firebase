@@ -1,0 +1,22 @@
+.m-100 {
+  margin: 100px;
+}
+
+.main {
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.action svg {
+  margin: 0px 5px 0px 5px;
+}
+
+.routeContainer {
+  width: 100%;
+  height: fit-content;
+  background-color: bisque;
+  border: 1px solid lightGray;
+  border-radius: 4px;
+}

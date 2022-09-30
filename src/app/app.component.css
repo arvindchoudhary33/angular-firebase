@@ -1,14 +1,36 @@
-.m-100{
-    margin: 100px;
+a {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
 }
-
-.main{
-    padding: 1.5rem;
-    border: 1px solid #dee2e6;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+.nav-bar {
+  list-style: none;
+  display: flex;
+  /* gap: 10px; */
+  background: black;
+  text-decoration: none;
+  height: 50px;
 }
-
-.action svg{
-    margin: 0px 5px 0px 5px;
+li:first-child {
+  border-left: none;
+}
+li:last-child {
+  border-right: none;
+}
+li {
+  color: white;
+  display: grid;
+  align-self: center;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+}
+.nav-bar li:hover {
+  background: white;
+  color: black;
+}
+.active {
+  background: yellow;
+  color: black;
 }
