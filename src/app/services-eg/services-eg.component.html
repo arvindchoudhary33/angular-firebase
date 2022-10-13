@@ -1,0 +1,34 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div style="width: 500px; height: fit-content">
+    <input
+      mat-input
+      [(ngModel)]="commonInput"
+      style="width: 100%"
+      placeholder="enter a number"
+    />
+    <div style="display: flex; gap: 10px; margin-top: 10px">
+      <button mat-raised-button color="primary" (click)="prime()">prime</button>
+      <button mat-raised-button color="primary" (click)="fibonacci()">
+        fibonacci
+      </button>
+      <button mat-raised-button color="primary" (click)="armstrong()">
+        armstrong
+      </button>
+      <button mat-raised-button color="primary" (click)="factorial()">
+        factorial
+      </button>
+    </div>
+    <h4>output : {{ numberOutput }} {{ stringOutput }} {{ arrayOutput }}</h4>
+  </div>
+</div>

@@ -20,3 +20,11 @@ input:focus {
   border-color: orange;
   box-shadow: none;
 }
+
+button {
+  padding: 10px;
+  border-radius: 5px !important;
+  background: green;
+  color: white;
+  border: none;
+}
