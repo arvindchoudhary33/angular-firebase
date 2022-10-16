@@ -1,0 +1,27 @@
+<div class="mainContainer">
+  <div class="subContainer">
+    <form
+      [formGroup]="fitnessClub"
+      (ngSubmit)="membershipCheck(fitnessClub.value)"
+      class="formsContainer"
+    >
+      <mat-form-field>
+        <mat-label>name</mat-label>
+        <input matInput placeholder="name" formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>age</mat-label>
+        <input matInput placeholder="age" formControlName="age" />
+      </mat-form-field>
+
+      <mat-form-field style="margin-bottom: 30px">
+        <mat-label>duration</mat-label>
+        <input matInput placeholder="" formControlName="duration" />
+        <mat-hint>choose duration in 3, 6 or 6+ months</mat-hint>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Submit</button>
+    </form>
+  </div>
+  <p>{{ output }}</p>
+</div>

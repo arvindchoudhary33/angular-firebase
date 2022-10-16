@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListOfStudentsComponent } from './list-of-students/list-of-students.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -20,6 +20,8 @@ import {
   FoodItemsComponent,
 } from './grocery-list/grocery-list.component';
 import { ServicesEgComponent } from './services-eg/services-eg.component';
+import { StudentMarksComponent } from './student-marks/student-marks.component';
+import { FitnessClubComponent } from './fitness-club/fitness-club.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +32,14 @@ import { ServicesEgComponent } from './services-eg/services-eg.component';
     GroceryListComponent,
     FoodItemsComponent,
     ServicesEgComponent,
+    StudentMarksComponent,
+    FitnessClubComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MatTableModule,
     MatButtonModule,
     MatInputModule,

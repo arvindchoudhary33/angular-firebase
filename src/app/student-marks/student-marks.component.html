@@ -1,0 +1,45 @@
+<div class="mainContainer">
+  <div class="subContainer">
+    <form
+      [formGroup]="studentMarks"
+      (ngSubmit)="calculate(studentMarks.value)"
+      class="formsContainer"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>name</mat-label>
+        <input matInput placeholder="name" formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>class</mat-label>
+        <input matInput placeholder="FY, SY, TY" formControlName="class" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>subject 1</mat-label>
+        <input matInput placeholder="subject 1" formControlName="subjectOne" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>subject 2</mat-label>
+        <input matInput placeholder="subject 2" formControlName="subjectTwo" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>subject 3</mat-label>
+        <input
+          matInput
+          placeholder="subject 3"
+          formControlName="subjectThree"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>subject 4</mat-label>
+        <input matInput placeholder="subject 4" formControlName="subjectFour" />
+      </mat-form-field>
+      <button mat-raised-button color="primary">Calculate</button>
+    </form>
+  </div>
+  <h2>{{ output }}</h2>
+</div>
