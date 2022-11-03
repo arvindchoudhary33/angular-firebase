@@ -9,7 +9,6 @@ import { DataSource } from '@angular/cdk/table';
   styleUrls: ['./list-of-students.component.css'],
 })
 export class ListOfStudentsComponent implements OnInit {
-  tableData: any;
   dataSource: any;
   id: any;
   rollNumber: any;
@@ -17,7 +16,7 @@ export class ListOfStudentsComponent implements OnInit {
   email: any;
   phoneNumber: any;
 
-  constructor(private store: AngularFirestore) { }
+  constructor(private store: AngularFirestore) {}
 
   ngOnInit(): void {
     this.getAll();
@@ -44,7 +43,7 @@ export class ListOfStudentsComponent implements OnInit {
   }
 
   delete(id: string) {
-    console.log(id)
+    console.log(id);
     this.store.collection('list-of-students').doc(id).delete();
   }
   getAll() {
@@ -59,7 +58,6 @@ export class ListOfStudentsComponent implements OnInit {
           );
         });
       });
-    console.log(this.dataSource.id)
+    console.log(this.dataSource.id);
   }
-
 }

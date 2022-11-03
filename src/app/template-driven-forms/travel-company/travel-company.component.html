@@ -1,0 +1,66 @@
+<!-- Create a form for travel company to accept mode of transport(bus, train , -->
+<!-- airways), source , destination , date (use datepicker) , traveller class, type -->
+<!-- of citizen (defence servent/senior citizen/ government servent etc) on -->
+<!-- submitting display the fare -->
+
+<div>
+  <p>Travel company</p>
+  <form
+    #travelCompanyForm="ngForm"
+    (ngSubmit)="travelFormSubmit(travelCompanyForm.value)"
+    style="display:flex; flex-direction:column; gap;10px"
+  >
+    <mat-form-field appearance="fill">
+      <mat-label>Mode of transport</mat-label>
+      <mat-select name="modeOfTransport" ngModel>
+        <mat-option value="train"> train </mat-option>
+        <mat-option value="bus"> bus </mat-option>
+        <mat-option value="air"> air </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Class</mat-label>
+      <mat-select name="class" ngModel>
+        <mat-option value="first"> first </mat-option>
+        <mat-option value="second"> second </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>You are</mat-label>
+      <mat-select name="typeOfCitizen" ngModel>
+        <mat-option value="defenceServant"> defense servant</mat-option>
+        <mat-option value="governmentServant"> government servant </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker1"
+        name="bookingDate"
+        [(ngModel)]="bookingDate"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker1"> </mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <!-- <mat-form-field class="example-form-field" appearance="fill"> -->
+    <!--   <mat-label>source-destination</mat-label> -->
+    <!--   <mat-date-range-input -->
+    <!--     [formGroup]="dateOne" -->
+    <!--     [rangePicker]="campaignOnePicker" -->
+    <!--     [comparisonStart]="dateTwo.value.start" -->
+    <!--     [comparisonEnd]="dateTwo.value.end" -->
+    <!--   > -->
+    <!--     <input matStartDate placeholder="Start date" formControlName="start" /> -->
+    <!--     <input matEndDate placeholder="End date" formControlName="end" /> -->
+    <!--   </mat-date-range-input> -->
+    <!--   <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+    <!--   <mat-datepicker-toggle -->
+    <!--     matSuffix -->
+    <!--     [for]="campaignOnePicker" -->
+    <!--   ></mat-datepicker-toggle> -->
+    <!--   <mat-date-range-picker #campaignOnePicker></mat-date-range-picker> -->
+    <!-- </mat-form-field> -->
+    <button mat-raised-button color="primary">submit</button>
+  </form>
+</div>

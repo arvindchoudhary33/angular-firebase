@@ -10,6 +10,9 @@ import { ListOfStudentsComponent } from './list-of-students/list-of-students.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTableModule } from '@angular/material/table';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 import { UserListComponent } from './user-list/user-list.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +25,19 @@ import {
 import { ServicesEgComponent } from './services-eg/services-eg.component';
 import { StudentMarksComponent } from './student-marks/student-marks.component';
 import { FitnessClubComponent } from './fitness-club/fitness-club.component';
+import { AngularComponentsComponent } from './angular-components/angular-components.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { CustomDirective } from './directives/custom.directive';
+import { CustomStructuralDirectiveDirective } from './directives/custom-structural-directive.directive';
+import { ToggleDirectiveDirective } from './directives/toggle-directive.directive';
+import { TooltipDirectiveDirective } from './directives/tooltip-directive.directive';
+import { MatSelectModule } from '@angular/material/select';
+import { TravelCompanyComponent } from './template-driven-forms/travel-company/travel-company.component';
+import { EventBookingComponent } from './template-driven-forms/event-booking/event-booking.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,11 +45,21 @@ import { FitnessClubComponent } from './fitness-club/fitness-club.component';
     UserListComponent,
     ListOfSchoolsComponent,
     ListOfPlacedStudentsComponent,
+    CustomStructuralDirectiveDirective,
     GroceryListComponent,
     FoodItemsComponent,
     ServicesEgComponent,
     StudentMarksComponent,
     FitnessClubComponent,
+    AngularComponentsComponent,
+    DirectivesComponent,
+    TemplateDrivenFormsComponent,
+    ReactiveFormsComponent,
+    CustomDirective,
+    ToggleDirectiveDirective,
+    TooltipDirectiveDirective,
+    TravelCompanyComponent,
+    EventBookingComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +67,12 @@ import { FitnessClubComponent } from './fitness-club/fitness-club.component';
     FormsModule,
     ReactiveFormsModule,
     MatTableModule,
+    MatDatepickerModule,
     MatButtonModule,
     MatInputModule,
+    MatNativeDateModule,
+    MatButtonToggleModule,
+    MatSelectModule,
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyBskiJYa7Mtf5FBXt36ZR6Jffyex21kkcc',
       authDomain: 'angular-blog-fa29f.firebaseapp.com',

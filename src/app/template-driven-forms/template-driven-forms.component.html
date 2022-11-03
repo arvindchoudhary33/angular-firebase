@@ -1,0 +1,50 @@
+<div class="template-driven-form">
+  <!-- Create a form for technical workshop use mat-input to accept name , email, -->
+  <!-- age, use mat-select for qualification,area of interest and then display the -->
+  <!-- available workshop for that person -->
+  <div>
+    <p>workshop</p>
+    <form
+      #templateForm="ngForm"
+      (ngSubmit)="onFormSubmit(templateForm.value)"
+      style="display: flex; flex-direction: column; gap: 10px"
+    >
+      <mat-form-field>
+        <mat-label>name</mat-label>
+        <input matInput type="text" name="name" ngModel />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput type="email" name="email" ngModel />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>age</mat-label>
+        <input matInput type="number" name="age" ngModel />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Qualification</mat-label>
+        <mat-select name="qualification" ngModel>
+          <mat-option *ngFor="let v of qualifications" [value]="v">
+            {{ v }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>area of interest</mat-label>
+        <mat-select name="areaOfInterest" ngModel>
+          <mat-option *ngFor="let v of areaOfInterest" [value]="v">
+            {{ v }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary">submit</button>
+    </form>
+    <br />
+    <h3>Available workshop : {{ availableWorkshop }}</h3>
+  </div>
+  <app-travel-company></app-travel-company>
+  <app-event-booking></app-event-booking>
+</div>

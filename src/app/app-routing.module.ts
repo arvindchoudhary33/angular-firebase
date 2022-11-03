@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AngularComponentsComponent } from './angular-components/angular-components.component';
+import { DirectivesComponent } from './directives/directives.component';
 import { FitnessClubComponent } from './fitness-club/fitness-club.component';
 import {
   FoodItemsComponent,
@@ -8,8 +10,10 @@ import {
 import { ListOfPlacedStudentsComponent } from './list-of-placed-students/list-of-placed-students.component';
 import { ListOfSchoolsComponent } from './list-of-schools/list-of-schools.component';
 import { ListOfStudentsComponent } from './list-of-students/list-of-students.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ServicesEgComponent } from './services-eg/services-eg.component';
 import { StudentMarksComponent } from './student-marks/student-marks.component';
+import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
@@ -22,6 +26,10 @@ const routes: Routes = [
   { path: 'services', component: ServicesEgComponent },
   { path: 'student-result', component: StudentMarksComponent },
   { path: 'fitness-club', component: FitnessClubComponent },
+  { path: 'reactive-form', component: ReactiveFormsComponent },
+  { path: 'template-form', component: TemplateDrivenFormsComponent },
+  { path: 'directives', component: DirectivesComponent },
+  { path: 'angular-components', component: AngularComponentsComponent }
 ];
 
 @NgModule({
