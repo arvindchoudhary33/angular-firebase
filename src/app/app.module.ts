@@ -22,6 +22,8 @@ import {
   GroceryListComponent,
   FoodItemsComponent,
 } from './grocery-list/grocery-list.component';
+import { MatTab, MatTabsModule } from '@angular/material/tabs';
+
 import { ServicesEgComponent } from './services-eg/services-eg.component';
 import { StudentMarksComponent } from './student-marks/student-marks.component';
 import { FitnessClubComponent } from './fitness-club/fitness-club.component';
@@ -73,6 +75,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatNativeDateModule,
     MatButtonToggleModule,
     MatSelectModule,
+    MatTabsModule,
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyBskiJYa7Mtf5FBXt36ZR6Jffyex21kkcc',
       authDomain: 'angular-blog-fa29f.firebaseapp.com',
@@ -87,4 +90,4 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

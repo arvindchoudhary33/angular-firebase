@@ -1,1 +1,73 @@
-<p>angular-components works!</p>
+<div class="container">
+  <div ng-app="surfacearea" ng-controller="myCtrl">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Cylinder</h2>
+        <p>
+          Radius :
+          <input
+            type="number"
+            [(ngModel)]="radius"
+            placeholder="Radius goes here"
+          />
+        </p>
+
+        <p>
+          height :
+          <input
+            type="number"
+            [(ngModel)]="height"
+            placeholder="height goes here"
+          />
+        </p>
+
+        <p>Volume is {{ pi * height * (radius * radius) }}</p>
+        <p>
+          Surface Area is
+          {{ 2 * pi * radius * height + 2 * pi * (radius * radius) }}
+        </p>
+        <p>Surface Area of Top is {{ pi * (radius * radius) }}</p>
+        <p>
+          Surface Area of Top and Bottom is
+          {{ 2 * pi * (radius * radius) }}
+        </p>
+        <p>Surface Area of side is {{ 2 * pi * radius * height }}</p>
+      </div>
+      <div class="col-sm-6">
+        <h2>Rectangular</h2>
+        <p>
+          Length :
+          <input
+            type="number"
+            [(ngModel)]="length"
+            placeholder="Radius goes here"
+          />
+        </p>
+
+        <p>
+          Width :
+          <input
+            type="number"
+            [(ngModel)]="width"
+            placeholder="height goes here"
+          />
+        </p>
+
+        <p>
+          height :
+          <input
+            type="number"
+            [(ngModel)]="height"
+            placeholder="height goes here"
+          />
+        </p>
+
+        <p>Volume is {{ length * height * width }}</p>
+        <p>
+          Surface Area Total is
+          {{ 2 * (width * length + height * length + height * width) }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

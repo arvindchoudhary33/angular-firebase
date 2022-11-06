@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AngularComponentsComponent implements OnInit {
 
+
+  radius: number = 0;
+  height: number = 0;
+  width: number = 0;
+  length: number = 0;
+  pi: number = 3.14;
+
   constructor() { }
 
   ngOnInit(): void {

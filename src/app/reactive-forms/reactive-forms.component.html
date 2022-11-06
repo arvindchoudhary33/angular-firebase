@@ -1,1 +1,81 @@
-<p>reactive-forms works!</p>
+<mat-tab-group mat-stretch-tabs>
+  <mat-tab label="Job portal"
+    ><div class="common-content">
+      <form
+        [formGroup]="jobPortal"
+        (ngSubmit)="commonSubmit(jobPortal.value, 'job-portal')"
+      >
+        <input formControlName="name" placeholder="name" />
+        <input formControlName="qualification" placeholder="qualification" />
+        <input formControlName="skills" placeholder="skills" />
+        <input formControlName="experience" placeholder="name" />
+        <button mat-raised-button color="primary">ADD</button>
+        {{ jobPortalData | json }}
+      </form>
+    </div></mat-tab
+  >
+  <mat-tab label="Food delivery" class="common-content"
+    ><div class="common-content">
+      <form
+        [formGroup]="foodDelivery"
+        (ngSubmit)="commonSubmit(foodDelivery.value, 'food-delivery')"
+      >
+        <input formControlName="name" placeholder="name" />
+        <input formControlName="address" placeholder="address" />
+        <input formControlName="phoneNumber" placeholder="phone number" />
+        <input formControlName="email" placeholder="email" />
+        <input formControlName="quantity" placeholder="quantity" />
+
+        <mat-form-field appearance="fill">
+          <mat-label>restaurants</mat-label>
+          <mat-select name="restaurants" formControlName="restaurants">
+            <mat-option value="a"> a </mat-option>
+            <mat-option value="b"> b </mat-option>
+            <mat-option value="c"> c </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>foods</mat-label>
+          <mat-select name="restaurants" formControlName="foodItems">
+            <mat-option value="a"> a </mat-option>
+            <mat-option value="b"> b </mat-option>
+            <mat-option value="c"> c </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary">ADD</button>
+        <p style="display: flex; gap: 3px">
+          <span>name</span><span>address</span><span>phoneNumber</span
+          ><span>email</span><span>quantity</span>
+        </p>
+        <div *ngFor="let v of foodDeliveryData">
+          <p>
+            <span
+              >{{ v.name }}__{{ v.address }}__{{ v.phoneNumber }}__{{
+                v.email
+              }}__{{ v.quantity }}</span
+            >
+          </p>
+        </div>
+      </form>
+    </div></mat-tab
+  >
+  <mat-tab label="sports items" class="common-content"
+    ><div class="common-content">
+      <form
+        [formGroup]="sportsItem"
+        (ngSubmit)="commonSubmit(sportsItem.value, 'sports-item')"
+      >
+        <input formControlName="name" placeholder="name" />
+        <input formControlName="email" placeholder="email" />
+        <input formControlName="sportType" placeholder="sport type" />
+        <input formControlName="quantity" placeholder="quantity" />
+        <button mat-raised-button color="primary">ADD</button>
+        <p>
+          <span>{{ sportsData | json }}</span>
+        </p>
+      </form>
+    </div></mat-tab
+  >
+</mat-tab-group>
+<div></div>
